@@ -7,18 +7,26 @@ namespace Leer_Un_Fichero_de_Texto
     {
         static void Main(string[] args)
         {
-            StreamReader sr = new StreamReader("Prueba.txt");
-
-            string linea;
-
-            //Para leer linea a linea
-            //Cuando la linea sea nula se dejara de leer
-            while((linea = sr.ReadLine()) != null)
+            try
             {
-                Console.WriteLine(linea);
+                StreamReader sr = new StreamReader("Prueba.txt");
+
+                string linea;
+
+                //Para leer linea a linea
+                //Cuando la linea sea nula se dejara de leer
+                while ((linea = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(linea);
+                }
+                //Tenemos que cerrar al leer 
+                sr.Close();
             }
-            //Tenemos que cerrar al leer 
-            sr.Close();
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine("El archivo no se ha encontrado");
+                
+            }
 
             Console.ReadLine();   
         }

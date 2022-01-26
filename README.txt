@@ -1,7 +1,4 @@
-2-Creacion del archivo de para leer y su lectura
+3- Solucion de problemas cuando no encuentra el fichero
 
-Se ha creado un archivo de texto llamado Pruebas en :
-
-	\Leer_Un_Fichero_de_Texto\bin\Debug\net5.0
-
-Este archivo sera leido por la aplicacion y mostrado por consola.
+Para evitar errores de que no encuentra el archivo, lo recomendable es encerrar en try catch
+la ejecucion de lectura de ficheros.
